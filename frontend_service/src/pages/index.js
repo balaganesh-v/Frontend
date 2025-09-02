@@ -4,27 +4,27 @@ import About from "@/components/common/About";
 import Features from "@/components/common/Features";
 import Pricing from "@/components/common/Pricing";
 import Contact from "@/components/common/Contact";
+import Login from "@/components/common/Login";
 import Footer from "@/components/layout/Footer";
 
 
 export default function Home() {
+  const UserName = "yuhnie";
+
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar username={UserName} />
       <main className="flex-1">
-        {/* 🔥 Debug Tailwind */}
-        <div className="bg-green-500 text-white text-center p-4">
-          If you see a green box, Tailwind is working ✅
-        </div>
-
-        <Hero />
+        <Hero username={UserName} />
         <About />
         <Features />
         <Pricing />
+        <Login username={UserName}/>
         <Contact />
       </main>
       <Footer />
     </div>
   );
 }
+
 
