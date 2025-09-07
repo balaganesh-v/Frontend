@@ -84,10 +84,10 @@ export default function About() {
           <div className="max-w-lg w-full text-center lg:text-left space-y-6 animate-slideInLeft">
             {/* Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-8">
-              About Niraa!!
+              About yuhnie!!
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
-              Niraa!! is dedicated to transforming education by providing a comprehensive school management system that simplifies operations and enhances collaboration.
+              yuhnie! is dedicated to transforming education by providing a comprehensive school management system that simplifies operations and enhances collaboration.
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
               Our mission is to empower educators, engage parents, and support students with intuitive tools designed for modern schools.

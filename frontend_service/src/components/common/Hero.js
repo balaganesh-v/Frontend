@@ -95,8 +95,7 @@ export default function Hero() {
 
           {/* Call-to-Action Buttons with Ripple Effect */}
           <div className="flex flex-col sm:flex-row justify-center gap-6 px-4 sm:px-6 lg:px-8">
-            <Link
-              href="#login"
+            <Link href="#login"
               className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold px-8 py-4 shadow-lg rounded-3xl hover:from-blue-700 hover:to-indigo-700 hover:shadow-2xl hover:scale-110 transition-all duration-300 transform w-full sm:w-56 text-lg overflow-hidden"
               onClick={createRipple}
             >
