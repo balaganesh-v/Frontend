@@ -7,12 +7,13 @@ export default function Navbar(props) {
   return (
     <nav className="bg-white px-4 sm:px-6 lg:px-8 py-4 shadow fixed top-0 left-0 right-0 z-50">
       <div className="px-4 py-2 flex justify-between items-center">
-        {/* Logo: dynamic username */}
+        
+        {/* Logo */}
         <Link
           href="/"
           className="text-xl md:text-2xl font-extrabold text-blue-600 hover:text-blue-700 transition"
         >
-          {props.username || "Niraa"}
+          {props.username || "yuhnie"}
         </Link>
 
         {/* Desktop Links */}
@@ -20,9 +21,15 @@ export default function Navbar(props) {
           <span className="text-gray-700 font-medium">
             Welcome, {props.username || "Guest"}!
           </span>
+
           <Link href="/" className="text-gray-600 hover:text-blue-600 text-base font-medium transition">
             Home
           </Link>
+
+          <Link href="/dashboard/principal" className="text-gray-600 hover:text-blue-600 text-base font-medium transition">
+            Principal Dashboard
+          </Link>
+
           <Link href="#about" className="text-gray-600 hover:text-blue-600 text-base font-medium transition">
             About
           </Link>
@@ -51,23 +58,10 @@ export default function Navbar(props) {
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col justify-center items-center p-2 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
-          aria-label="Toggle menu"
         >
-          <span
-            className={`block w-6 h-0.5 bg-blue-600 mb-1 transition-transform duration-300 ${
-              open ? "rotate-45 translate-y-2" : ""
-            }`}
-          ></span>
-          <span
-            className={`block w-6 h-0.5 bg-blue-600 mb-1 transition-opacity duration-300 ${
-              open ? "opacity-0" : ""
-            }`}
-          ></span>
-          <span
-            className={`block w-6 h-0.5 bg-blue-600 transition-transform duration-300 ${
-              open ? "-rotate-45 -translate-y-2" : ""
-            }`}
-          ></span>
+          <span className={`block w-6 h-0.5 bg-blue-600 mb-1 transition-transform duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-blue-600 mb-1 transition-opacity duration-300 ${open ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-blue-600 transition-transform duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
       </div>
 
@@ -75,38 +69,28 @@ export default function Navbar(props) {
       {open && (
         <div className="md:hidden bg-white shadow-md absolute top-full left-0 right-0 transition-all duration-300">
           <span className="block px-4 py-2">Hello, {props.username || "Guest"}!</span>
-          <Link
-            href="/"
-            className="block px-4 py-3 border-b border-t text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium"
-          >
+
+          <Link href="/" className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium">
             Home
           </Link>
-          <Link
-            href="#about"
-            className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium"
-          >
+
+          <Link href="/dashboard/principal" className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium">
+            Principal Dashboard
+          </Link>
+
+          <Link href="#about" className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium">
             About
           </Link>
-          <Link
-            href="#features"
-            className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium"
-          >
+          <Link href="#features" className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium">
             Features
           </Link>
-          <Link
-            href="#pricing"
-            className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium"
-          >
+          <Link href="#pricing" className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium">
             Pricing
           </Link>
-          <Link
-            href="#contact"
-            className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium"
-          >
+          <Link href="#contact" className="block px-4 py-3 border-b text-gray-600 hover:text-blue-600 hover:bg-gray-50 text-base font-medium">
             Contact
           </Link>
 
-          {/* Mobile CTA */}
           <div className="px-4 py-3">
             <Link
               href="/login"
