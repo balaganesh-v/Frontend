@@ -1,6 +1,6 @@
 'use client'
-import Home from '@/pages/index'
+import Hero from '@/components/common/Hero'
 
 export default function Page() {
-  return <Home />
+  return <Hero />
 }

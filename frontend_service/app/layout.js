@@ -1,15 +1,15 @@
 import '@/styles/globals.css'
-import Providers from '@/providers/Providers'
+import MainLayout from '@/components/layout/MainLayout'
 
 export const metadata = {
-  title: 'School Management',
+  title: 'yuhnie ❤️!!',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   )
